@@ -5,6 +5,7 @@
 #include "../library/SelectionSort.h"
 #include "../library/QuickSort.h"
 #include "../library/MaxHeap.h"
+#include "../library/CountingSort.h"
 
 int main(void)
 {
@@ -65,5 +66,17 @@ int main(void)
     heap.sort();
     std::cout << "Ending Array: ";
     heap.print();
+  }
+
+/**********test Counting Sort...*************************/
+  {
+    std::cout << "Test #6: Counting Sort" << std::endl;
+    int array[] = {1, 1, 2, 1, 4, 5, 6, 7, 7, 6, 6, 5, 1, 3, 2};
+    size_t size = sizeof(array) / sizeof(array[0]);
+    std::cout << "Starting Array: ";
+    Print::array(array, size);
+    Sort::CountingSort::sort(array, size);
+    std::cout << "Ending Array: ";
+    Print::array(array, size);
   }
 }
