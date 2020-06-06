@@ -1,4 +1,6 @@
 #include <iostream>
+#include <algorithm>
+#include <array>
 #include "../library/BubbleSort.h"
 #include "../library/Print.h"
 #include "../library/Filter.h"
@@ -6,6 +8,7 @@
 #include "../library/QuickSort.h"
 #include "../library/MaxHeap.h"
 #include "../library/CountingSort.h"
+#include "../library/RadixSort.h"
 
 int main(void)
 {
@@ -78,5 +81,32 @@ int main(void)
     Sort::CountingSort::sort(array, size);
     std::cout << "Ending Array: ";
     Print::array(array, size);
+  }
+
+/**********test Radix Sort...*************************/
+  {
+    std::cout << "Test #7: Radix Sort" << std::endl;
+    int array[] = {101021, 231, 999, 1000, 4, 12, 106, 9981, 12345, 1234, 12347, 10, 9, 3, 2};
+    size_t base(10);
+    size_t size = sizeof(array) / sizeof(array[0]);
+    std::cout << "Starting Array: ";
+    Print::array(array, size);
+    Sort::RadixSort::sort(array, size, base);
+    std::cout << "Ending Array: ";
+    Print::array(array, size);
+  }
+
+/**********test C++ Sort...*************************/
+  {
+    std::cout << "Test #7: C++ Sort" << std::endl;
+    std::array<int,15> array = {101021, 231, 999, 1000, 4, 12, 106, 9981, 12345, 1234, 12347, 10, 9, 3, 2};
+    std::cout << "Starting Array: ";
+    Print::array(array.data(), array.size());
+    std::sort(array.begin(), array.end());
+    std::cout << "Ending Array: ";
+    Print::array(array.data(), array.size());
+    std::cout << "Reverse Array: ";
+    std::sort(array.begin(), array.end(), std::greater<int>());
+    Print::array(array.data(), array.size());
   }
 }
