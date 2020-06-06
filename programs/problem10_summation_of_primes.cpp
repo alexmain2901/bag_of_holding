@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "../library/Prime.h"
+#include "../library/math/Prime.h"
 
 /**
 * @brief Summation of primes program...

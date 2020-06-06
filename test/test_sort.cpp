@@ -1,14 +1,14 @@
 #include <iostream>
 #include <algorithm>
 #include <array>
-#include "../library/BubbleSort.h"
-#include "../library/Print.h"
-#include "../library/Filter.h"
-#include "../library/SelectionSort.h"
-#include "../library/QuickSort.h"
-#include "../library/MaxHeap.h"
-#include "../library/CountingSort.h"
-#include "../library/RadixSort.h"
+#include "../library/sort/BubbleSort.h"
+#include "../library/math/Print.h"
+#include "../library/sort/Filter.h"
+#include "../library/sort/SelectionSort.h"
+#include "../library/sort/QuickSort.h"
+#include "../library/sort/MaxHeap.h"
+#include "../library/sort/CountingSort.h"
+#include "../library/sort/RadixSort.h"
 
 int main(void)
 {
